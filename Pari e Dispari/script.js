@@ -20,7 +20,7 @@ function getRndInteger(min, max) {
 }
 
 // Variabili
-const oddOrEven = prompt('Scegli Pari o Dispari');
+const oddOrEven = prompt('Scegli Pari o Dispari').toLocaleLowerCase();
 const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
 const computerNumber = getRndInteger (1, 5);
 let sum = (computerNumber + userNumber);

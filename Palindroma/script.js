@@ -1,22 +1,26 @@
-/*Palindroma
+/*
+Palindroma
 Chiedere all’utente di inserire una parola
-Creare una funzione per capire se la parola inserita è palindroma*/
-// program to check if the string is palindrome or not
+Creare una funzione per capire se la parola inserita è palindroma
+*/
 
-const string = prompt('La parola inserità è: ');
-const finalString = checkPalindrome(string);
+let parola = prompt('Inserisci parola:');
+let carattere;
+let parolaInversa = '';
 
-function checkPalindrome(string) {
+let i = parola.length - 1;
 
-  const word = string.length;
-
-  for (let i = 0; i < word / 2; i++) {
-    
-    if (string[i] !== string[word - 1 - i]) {
-      return 'La parola non è Palindroma';
-    }
-  }
-  return 'La parola è Palindroma';
+while (i >= 0) {
+  carattere = parola[i];
+  parolaInversa += carattere;
+  console.log(carattere);
+  i--;
 }
 
-console.log(finalString);
+console.log(parolaInversa);
+
+if (parola == parolaInversa){
+  console.log('La parola è palindroma');
+} else {
+  console.log('La parola non è palindroma');
+}
