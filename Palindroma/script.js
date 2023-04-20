@@ -19,7 +19,7 @@ while (i >= 0) {
 
 console.log(parolaInversa);
 
-if (parola == parolaInversa){
+if (parola == parolaInversa) {
   console.log('La parola è palindroma');
 } else {
   console.log('La parola non è palindroma');
