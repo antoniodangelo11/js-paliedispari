@@ -7,14 +7,6 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
-const oddOrEven = prompt('Scegli Pari o Dispari');
-const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
-const computerNumber = getRndInteger (1, 5);
-let sum = (computerNumber + userNumber);
-
-console.log('Numero PC: ', computerNumber);
-console.log('Numero Utente: ', userNumber);
-
 function isEven(result) {
     if (result % 2 == 0) {
         return true;
@@ -23,17 +15,25 @@ function isEven(result) {
     }
 }
 
-console.log('Somma: ', sum);
-
-
-if (isEven(sum) == true && oddOrEven == 'Pari' || isEven(sum) == false && oddOrEven == ('Dispari')) {
-    console.log('Hai vinto');
-    alert('Hai vinto');
-} else {
-    console.log('Hai perso');
-    alert('Hai perso');
-}
-
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
+// Variabili
+const oddOrEven = prompt('Scegli Pari o Dispari');
+const userNumber = parseInt(prompt('Scegli un numero da 1 a 5'));
+const computerNumber = getRndInteger (1, 5);
+let sum = (computerNumber + userNumber);
+
+console.log('Numero PC: ', computerNumber);
+console.log('Numero Utente: ', userNumber);
+
+if (isEven(sum) == true && oddOrEven == 'Pari' || isEven(sum) == false && oddOrEven == 'Dispari') {
+    console.log('Hai vinto');
+} else {
+    console.log('Hai perso');
+}
+
+console.log('Somma: ', sum);
+
+
