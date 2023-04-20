@@ -3,6 +3,9 @@ Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma*/
 // program to check if the string is palindrome or not
 
+const string = prompt('La parola inserità è: ');
+const finalString = checkPalindrome(string);
+
 function checkPalindrome(string) {
 
   const word = string.length;
@@ -15,9 +18,5 @@ function checkPalindrome(string) {
   }
   return 'La parola è Palindroma';
 }
-
-const string = prompt('La parola inserità è: ');
-
-const finalString = checkPalindrome(string);
 
 console.log(finalString);
